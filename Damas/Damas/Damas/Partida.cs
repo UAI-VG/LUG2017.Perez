@@ -11,16 +11,12 @@ namespace Damas
        private bool turno;
        private Tablero tablero;
        private Jugador jugador1;
-       private Jugador jugador2;
-       
-
+        private Jugador jugador2;
        public Partida(string nombre1, string nombre2,Coordenada coordenada)
        {
-           tablero = new Tablero(coordenada);
-           jugador1 = new Jugador();
-           jugador2 = new Jugador();
-           jugador1.Nombre = nombre1;
-           jugador2.Nombre = nombre2;
+            jugador1 = new Jugador(nombre1);
+            jugador2 = new Jugador(nombre2);
+            tablero = new Tablero(this);
         } //CONSTRUCTOR
 
       

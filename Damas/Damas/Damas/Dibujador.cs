@@ -11,22 +11,39 @@ namespace Damas
 
         public void Dibujar(Partida partida)
         {
-            Console.WriteLine(partida.Jugador1.Nombre.ToString());
-            Console.WriteLine(partida.Jugador2.Nombre.ToString());
-
-            for (int X = 0; X < partida.Tablero.Tamaño.X; X++)
-            {
-                for (int Y = 0; Y < partida.Tablero.Tamaño.Y; Y++)
+                Console.WriteLine(partida.Jugador1.Nombre.ToString());
+                Console.WriteLine(partida.Jugador2.Nombre.ToString());
+                for (int X = 0; X < partida.Tablero.Tamaño.X; X++)
                 {
-                    if (partida.Tablero.Matriz[X,Y] == null)
+                Console.Write(X);
+                    for (int Y = 0; Y < partida.Tablero.Tamaño.Y; Y++)
                     {
-                        Console.Write(" * ");
+                        
+                        if (partida.Tablero.Matriz[X, Y] == null)
+                        {
+                            Console.Write(" * ");
+                        }
+
+                        if (partida.Tablero.Matriz[X, Y] != null)
+                        {
+                            if (partida.Tablero.Matriz[X, Y].Jugador == partida.Jugador1)
+                            {
+                                Console.Write(" B "); // piezas blancas
+                            }
+                        }
+                        if (partida.Tablero.Matriz[X, Y] != null)
+                        {
+                            if (partida.Tablero.Matriz[X, Y].Jugador == partida.Jugador2)
+                            {
+                                Console.Write(" R "); // piezas rojas
+                            }
+                        }
+
                     }
+                    Console.WriteLine();
+
                 }
-                Console.WriteLine();
-                
-            }
-            Console.ReadKey();
+                Console.ReadKey();
         }
     }
 }

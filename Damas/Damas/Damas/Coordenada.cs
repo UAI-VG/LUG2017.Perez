@@ -11,6 +11,11 @@ namespace Damas
         private int x;
         private int y;
 
+        public Coordenada()
+        {
+            Y = 10;
+            X = 10;
+        }
 
         public int X
         {

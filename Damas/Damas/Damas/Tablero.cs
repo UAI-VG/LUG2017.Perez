@@ -10,35 +10,65 @@ namespace Damas
     class Tablero
     {
         private Piezas[,] matriz;
-
-        private Coordenada tamaño;
-
-        public Tablero(Coordenada Cordenada)
+        public Tablero(Partida partida)
         {
-            // INSTANCIA TABLERO Y SU TAMAÑO
-            tamaño = Cordenada;
-            matriz = new Piezas[Cordenada.X, Cordenada.Y];
-            for (int X = 0; X < Cordenada.X; X++)
+            matriz = new Piezas[10, 10];
+            //----------------------------------------------------------- todo null
+            for (int X = 0; X < 10; X++)
             {
-                for (int Y = 0; Y < Cordenada.Y; Y++)
+                for (int Y = 0; Y < 10; Y++)
                 {
                     matriz[Y, X] = null;
                 }
             }
-            //UBICA FICHAS DE CADA JUGADOR
-            //for (int X = 0; X < Cordenada.X; X++)
-            //{
-            //    for (int Y = 0; Y < Cordenada.Y; Y++)
-            //    {
-            //        matriz[Y, X] = null;
-            //    }
-            //} SIN HACER.
+            //----------------------------------------------------------- fichas Negras
+            for (int X = 0; X < 10; X++)
+            {
+                for (int Y = 0; Y < 4; Y++)
+                {
+                    if (X == 0 || X == 2 || X == 4 || X == 6 || X == 8 || X == 10)
+                    {
+                        if (Y == 0 || Y == 2)
+                        {
+                            matriz[Y, X] = new Piezas(partida.Jugador1);
 
-        }
+                        }
+                    }
+                    if (X == 1 || X == 3 || X == 5 || X == 7 || X == 9)
+                    {
+                        if (Y == 1 || Y == 3)
+                        {
+                            matriz[Y, X] = new Piezas(partida.Jugador1);
 
-        public Coordenada Tamaño
-        {
-            get { return tamaño; }
+                        }
+                    }
+
+                }
+            }
+            //----------------------------------------------------------- fichas Rojas
+            for (int X = 0; X < 10; X++)
+            {
+                for (int Y = 6; Y < 10; Y++)
+                {
+                    if (X == 0 || X == 2 || X == 4 || X == 6 || X == 8 || X == 10)
+                    {
+                        if (Y == 6 || Y == 8)
+                        {
+                            matriz[Y, X] = new Piezas(partida.Jugador2);
+
+                        }
+                    }
+                    if (X == 1 || X == 3 || X == 5 || X == 7 || X == 9)
+                    {
+                        if (Y == 7 || Y == 9 )
+                        {
+                            matriz[Y, X] = new Piezas(partida.Jugador2);
+
+                        }
+                    }
+
+                }
+            }
         }
         public Piezas[,] Matriz
         {

@@ -10,6 +10,11 @@ namespace Damas
     {
         private string nombre;
 
+        public Jugador(string nombre)
+        {
+            Nombre = nombre;
+        } //Constructor
+
         public void Jugar(Tablero tablero, Coordenada cordenada)
         {
             

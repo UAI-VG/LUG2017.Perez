@@ -8,6 +8,17 @@ namespace Damas
 {
     class Piezas
     {
-       private Jugador Jugador;
+        private Jugador jugador;
+
+        public Piezas(Jugador JugadorQuePoneFicha)
+        {
+            Jugador = JugadorQuePoneFicha;
+        }
+
+        public  Jugador Jugador
+        {
+            get { return jugador; }
+            set { jugador = value; }
+        }
     }
 }
