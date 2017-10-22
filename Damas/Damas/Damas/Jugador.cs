@@ -9,6 +9,7 @@ namespace Damas
     class Jugador
     {
         private string nombre;
+        
 
         public Jugador(string nombre)
         {
@@ -17,7 +18,7 @@ namespace Damas
 
         public void Jugar(Tablero tablero, Coordenada cordenada)
         {
-            
+            tablero.CalcularFicha(cordenada);
         }
         //--------------------------------------------------------------------------------
         public string Nombre

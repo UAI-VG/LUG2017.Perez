@@ -74,6 +74,15 @@ namespace Damas
         {
             get { return matriz; }
         }
+
+
+        public void CalcularFicha(Coordenada coordenada)
+        {
+            if(Matriz[coordenada.X, coordenada.Y] != null)
+            {
+               
+            }
+        }
     }
 
 }

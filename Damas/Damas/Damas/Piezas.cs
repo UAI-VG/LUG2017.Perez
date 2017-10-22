@@ -10,6 +10,7 @@ namespace Damas
     {
         private Jugador jugador;
 
+
         public Piezas(Jugador JugadorQuePoneFicha)
         {
             Jugador = JugadorQuePoneFicha;
@@ -20,5 +21,6 @@ namespace Damas
             get { return jugador; }
             set { jugador = value; }
         }
+
     }
 }
