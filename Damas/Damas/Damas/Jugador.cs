@@ -16,9 +16,9 @@ namespace Damas
             Nombre = nombre;
         } //Constructor
 
-        public void Jugar(Tablero tablero, Coordenada cordenada)
+        public void Jugar(Tablero tablero, Coordenada cordenada, bool turno)
         {
-            tablero.CalcularFicha(cordenada);
+            tablero.CalcularFicha(cordenada,turno);
         }
         //--------------------------------------------------------------------------------
         public string Nombre

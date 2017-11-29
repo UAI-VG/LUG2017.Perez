@@ -74,13 +74,21 @@ namespace Damas
         {
             get { return matriz; }
         }
+        
 
 
-        public void CalcularFicha(Coordenada coordenada)
+        public void CalcularFicha(Coordenada coordenada,bool turno)
         {
-            if(Matriz[coordenada.X, coordenada.Y] != null)
+            if (Matriz[coordenada.X, coordenada.Y] != null)
             {
-               
+                if(turno == true)
+                {
+                    
+                }
+                if(turno == false)
+                {
+
+                }
             }
         }
     }

@@ -51,12 +51,12 @@ namespace Damas
         {
             if (Partida.Turno == true)
             {
-                Partida.Jugador1.Jugar(Partida.Tablero, coordenada);
+                Partida.Jugador1.Jugar(Partida.Tablero, coordenada,Partida.Turno);
                 Partida.Turno = false;
             }
             if (Partida.Turno == false)
             {
-                Partida.Jugador1.Jugar(Partida.Tablero, coordenada);
+                Partida.Jugador2.Jugar(Partida.Tablero, coordenada, Partida.Turno);
                 Partida.Turno = false;
             }
         }
